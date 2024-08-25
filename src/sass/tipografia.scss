@@ -1,0 +1,56 @@
+@import 'rem-calc.scss';
+
+:root {
+    .text-primary {
+        color: var(--primary-normal);
+    }
+
+    .text-primary-dark {
+        color: var(--primary-dark);
+    }
+
+    .text-primary-light {
+        color: var(--primary-light);
+    }
+
+    .text-grey-1 {
+        color: var(--grey-1);
+    }
+
+    .text-grey-2 {
+        color: var(--grey-2);
+    }
+
+    .text-grey-3 {
+        color: var(--grey-3);
+    }
+
+    .text-grey-4 {
+        color: var(--grey-4);
+    }
+
+    .text-grey-5 {
+        color: var(--grey-5);
+    }
+
+    .title-large{
+        font-size: rem-calc(72);
+    }
+
+    .title{
+        font-size: rem-calc(48);
+    }
+
+    .sub-title{
+        font-size: rem-calc(40);
+    }
+
+    .descrition{
+        font-size: rem-calc(32);
+    }
+
+    .normal{
+        line-height: 150%;
+        font-size: rem-calc(24);
+    }
+}

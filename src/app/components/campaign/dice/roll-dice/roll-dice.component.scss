@@ -1,0 +1,28 @@
+@import '../../../../../sass/rem-calc.scss';
+
+:host {
+  .container {
+    display: flex;
+    flex-direction: row;
+    height: rem-calc(100);
+    padding: rem-calc(10);
+    margin-bottom: rem-calc(5);
+    background-color: #c9c9c9;
+    -webkit-border-radius: rem-calc(20);
+    -moz-border-radius: rem-calc(20);
+    border-radius: rem-calc(20);
+  }
+  .final-result{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 25%;
+  }
+  .resume {
+    width: 75%;
+  }
+  .player-name {
+    text-align: center;
+  }
+}

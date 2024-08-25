@@ -1,0 +1,32 @@
+@import '../../../../sass/rem-calc.scss';
+
+:host {
+  .container {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+  }
+  .top-session {
+    width: 100%;
+    height: 20vh;
+    background-color: brown;
+  }
+  .middle-session{
+    display: flex;
+    width: 100%;
+  }
+  .bottom-session {
+    width: 100%;
+    height: 20vh;
+    background-color: green;
+  }
+  .roll-dice-list{
+    width: 25%;
+  }
+  .war-zone{
+    width: 50%;
+  }
+  .player-sheet{
+    width: 25%;
+  }
+}

@@ -1,0 +1,8 @@
+@import '../../../../../sass/rem-calc.scss';
+
+:host {
+  .container {
+    height: 100%;
+    padding: rem-calc(5);
+  }
+}
