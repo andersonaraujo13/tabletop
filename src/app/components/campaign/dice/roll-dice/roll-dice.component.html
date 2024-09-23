@@ -5,6 +5,11 @@
       </div>
       <p>{{rollDice.nomePericia}}</p>
       <p>{{rollDice.formula}}</p>
+      <div class="list-dice">
+        @for (dice of rollDice.jogadas; track $index) {
+        <b>D{{dice.face}}:</b>[{{dice.valores}}]
+        }
+      </div>
     </div>
     <div class="final-result">
       <div class="title-large">{{rollDice.resultadoFinal}}</div>

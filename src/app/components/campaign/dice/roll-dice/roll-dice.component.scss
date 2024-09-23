@@ -4,7 +4,8 @@
   .container {
     display: flex;
     flex-direction: row;
-    height: rem-calc(100);
+    line-height: 150%;
+    height: rem-calc(120);
     padding: rem-calc(10);
     margin-bottom: rem-calc(5);
     background-color: #c9c9c9;
@@ -21,8 +22,17 @@
   }
   .resume {
     width: 75%;
+    font-size: rem-calc(16);
   }
   .player-name {
     text-align: center;
+    text-wrap: nowrap;
+    font-size: rem-calc(24);
+  }
+  b {
+    font-weight: 700;
+  }
+  .list-dice{
+    font-size: rem-calc(16);
   }
 }

@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="skill">
+    <div class="skill-check-group">
+      <div [ngClass]="{'skill-check-ative': skill.possui}" class= "skill-check" (click)="checkSkill()"></div>
+      <b>{{skill.pericia}}</b>
+      <div [ngClass]="{'skill-trained ': skill.treinado, 'skill-not-trained': !skill.treinado}"></div>
+      {{skill.atributo}}
+    </div>
+    <div class="skill-input-group">
+      <input class="skill-input" disabled [(ngModel)]="skill.modificadorPericia">
+      =
+      <input class="skill-input" disabled maxlength="2" value="{{skill.modificadorAtributo}}">
+      +
+      <input class="skill-input" [disabled]="!skill.possui" maxlength="2"  [(ngModel)]="skill.graduacao" numbersOnly>
+      +
+      <input class="skill-input" [disabled]="!skill.possui" maxlength="2" [(ngModel)]="skill.modificadorVariado" numbersOnly>
+    </div>
+    <i class="fa-solid fa-dice-d6 icon-size" (click)="roll20()"></i>
+    <i class="fa-solid fa-dice-d6 icon-size" (click)="roll30()"></i>
+  </div>
+</div>

@@ -1,6 +1,27 @@
+@import '../../../../../sass/rem-calc.scss';
 :host {
   .container {
-    height: 100%;
-    background-color: white;
+    height: 60vh;
+    padding: rem-calc(5);
+    display: flex;
+    flex-direction: column;
+  }
+  .player-description {
+    height: 30%;
+    background-color: transparent;
+  }
+  .example-header-image {
+    background-image: url("/icon/Paladin.svg");
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+    border-radius: 10%;
+  }
+  mat-tab-group {
+    height: 70%;
+
+    ::ng-deep .mat-mdc-tab-body-wrapper {
+        flex: 1 1 70%;
+    }
   }
 }
