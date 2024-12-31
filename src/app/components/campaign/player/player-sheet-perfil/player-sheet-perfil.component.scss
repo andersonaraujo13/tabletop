@@ -1,0 +1,32 @@
+@import '../../../../../sass/rem-calc.scss';
+
+:host {
+  .container {
+    padding: rem-calc(5);
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+  }
+
+  .item-header {
+    min-height: rem-calc(32);
+    display: flex;
+    margin: 1px;
+    background: deepskyblue;
+    justify-content: center;
+    align-items: center;
+    font-size: rem-calc(10);
+  }
+
+  .item {
+    min-height: rem-calc(32);
+    display: flex;
+    margin: 1px;
+    background: tomato;
+    justify-content: center;
+    align-items: center;
+    font-size: rem-calc(10);
+  }
+}

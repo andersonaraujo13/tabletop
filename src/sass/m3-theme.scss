@@ -3,6 +3,7 @@
 
 @use 'sass:map';
 @use '@angular/material' as mat;
+@use 'form.scss' as formulario;
 @include mat.core();
 
 // Note: Color palettes are generated from primary: #0ca926
@@ -157,4 +158,5 @@ html {
   @include mat.all-component-bases($light-theme);
   @include mat.all-component-typographies($light-theme);
   @include mat.all-component-densities($light-theme);
+  @include formulario.theme($light-theme);
 }

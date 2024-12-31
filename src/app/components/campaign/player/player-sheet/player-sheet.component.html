@@ -1,20 +1,71 @@
 <div class="container">
-  <mat-card class="player-description" appearance="outlined" >
+  <mat-card class="player-description" appearance="outlined">
     <mat-card-header>
       <div mat-card-avatar class="example-header-image"></div>
       <mat-card-title> Geraldo da Estrela na Testa</mat-card-title>
       <mat-card-subtitle>Mago Elemental & Alta Mágia</mat-card-subtitle>
       <mat-card-subtitle>Nível 1</mat-card-subtitle>
     </mat-card-header>
+
+    <mat-card-content>
+      <div class="d-flex-row d-flex-space-between">
+        <div class="skill-container">
+          <div class="hexagono">
+            <span>6</span>
+          </div>
+          FOR
+        </div>
+        <div class="skill-container">
+          <div class="hexagono">
+            <span>17</span>
+          </div>
+          DES
+        </div>
+        <div class="skill-container">
+          <div class="hexagono">
+            <span>10</span>
+          </div>
+          CON
+        </div>
+        <div class="skill-container">
+          <div class="hexagono">
+            <span>18</span>
+          </div>
+          INT
+        </div>
+        <div class="skill-container">
+          <div class="hexagono">
+            <span>16</span>
+          </div>
+          SAB
+        </div>
+        <div class="skill-container">
+          <div class="hexagono">
+            <span>10</span>
+          </div>
+          CAR
+        </div>
+      </div>
+    </mat-card-content>
   </mat-card>
   <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
-    <mat-tab label="Armas">
-        Content 1
+    <mat-tab label="Perfil">
+      <app-player-sheet-perfil />
+    </mat-tab>
+    <mat-tab label="Armamento">
+      <app-player-sheet-weapon />
     </mat-tab>
     <mat-tab label="Perícias">
       <app-player-sheet-skill-list />
     </mat-tab>
-    <mat-tab label="Grimório">Content 3</mat-tab>
-    <mat-tab label="Campanha">Content 3</mat-tab>
+    <mat-tab label="Grimório">
+      <app-player-sheet-grimoire />
+    </mat-tab>
+    <mat-tab label="Mochila">
+      <app-player-sheet-bag />
+    </mat-tab>
+    <mat-tab label="Campanha">
+      <app-player-sheet-campaign />
+    </mat-tab>
   </mat-tab-group>
 </div>

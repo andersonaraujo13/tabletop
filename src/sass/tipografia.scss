@@ -1,38 +1,6 @@
 @import 'rem-calc.scss';
 
 :root {
-    .text-primary {
-        color: var(--primary-normal);
-    }
-
-    .text-primary-dark {
-        color: var(--primary-dark);
-    }
-
-    .text-primary-light {
-        color: var(--primary-light);
-    }
-
-    .text-grey-1 {
-        color: var(--grey-1);
-    }
-
-    .text-grey-2 {
-        color: var(--grey-2);
-    }
-
-    .text-grey-3 {
-        color: var(--grey-3);
-    }
-
-    .text-grey-4 {
-        color: var(--grey-4);
-    }
-
-    .text-grey-5 {
-        color: var(--grey-5);
-    }
-
     .title-large{
         font-size: rem-calc(72);
     }
@@ -51,5 +19,9 @@
 
     .normal{
         font-size: rem-calc(8);
+    }
+
+    b {
+      font-weight: 600;
     }
 }

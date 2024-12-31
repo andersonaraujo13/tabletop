@@ -34,9 +34,7 @@
             ],
             "styles": [
               "src/sass/m3-theme.scss",
-              "src/styles.scss",
-              "node_modules/primeng/resources/themes/lara-light-blue/theme.css",
-              "node_modules/primeng/resources/primeng.min.css"
+              "src/styles.scss"
             ],
             "scripts": []
           },
@@ -97,9 +95,7 @@
             ],
             "styles": [
               "src/sass/m3-theme.scss",
-              "src/styles.scss",
-              "node_modules/primeng/resources/themes/lara-light-blue/theme.css",
-              "node_modules/primeng/resources/primeng.min.css"
+              "src/styles.scss"
             ],
             "scripts": []
           }

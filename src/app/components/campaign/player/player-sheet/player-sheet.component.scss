@@ -1,4 +1,5 @@
 @import '../../../../../sass/rem-calc.scss';
+
 :host {
   .container {
     height: 60vh;
@@ -6,10 +7,12 @@
     display: flex;
     flex-direction: column;
   }
+
   .player-description {
     height: 30%;
     background-color: transparent;
   }
+
   .example-header-image {
     background-image: url("/icon/Paladin.svg");
     background-size: cover;
@@ -17,11 +20,28 @@
     width: 50px;
     border-radius: 10%;
   }
+
   mat-tab-group {
     height: 70%;
 
     ::ng-deep .mat-mdc-tab-body-wrapper {
-        flex: 1 1 70%;
+      flex: 1 1 70%;
     }
+  }
+
+  .hexagono {
+    background-image: url("/icon/Hexagon.svg");
+    background-size: cover;
+    height: 64px;
+    width: 64px;
+    border-radius: 10%;
+    align-content: center;
+    text-align: center;
+    color: #004609;
+  }
+
+  .skill-container{
+    text-align: center;
+    color: #004609;
   }
 }

@@ -1,7 +1,7 @@
 import { Component, inject, Input } from '@angular/core';
 import { RollDice } from '../../../../class/campaign/dice/roll-dice.class';
 import { Skill } from '../../../../class/campaign/player/skill.class';
-import { ClientService } from '../../../../service/message/rabbitMQ/client.service';
+import { ClientService } from '../../../../service/message/socket/client-dice.service';
 import { FormsModule } from '@angular/forms';
 import { NgClass } from '@angular/common';
 import { NumbersOnlyDirective } from '../../../../utils/directive/numbers-only.directive';

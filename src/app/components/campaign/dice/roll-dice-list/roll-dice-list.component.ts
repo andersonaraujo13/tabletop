@@ -2,7 +2,7 @@ import { Component, effect, inject } from '@angular/core';
 import { RollDiceComponent } from "../roll-dice/roll-dice.component";
 import { ScrollPanelModule } from 'primeng/scrollpanel';
 import { RollDice } from '../../../../class/campaign/dice/roll-dice.class';
-import { ClientService } from '../../../../service/message/rabbitMQ/client.service';
+import { ClientService } from '../../../../service/message/socket/client-dice.service';
 
 @Component({
   selector: 'app-roll-dice-list',

@@ -4,7 +4,7 @@ import { RollDiceListComponent } from '../../../components/campaign/dice/roll-di
 import { PlayerSheetComponent } from '../../../components/campaign/player/player-sheet/player-sheet.component';
 import { PlayerShieldListComponent } from '../../../components/campaign/player/player-shield-list/player-shield-list.component';
 import { MasterShieldComponent } from '../../../components/campaign/master/master-shield/master-shield.component';
-import { ClientService } from '../../../service/message/rabbitMQ/client.service';
+import { ClientService } from '../../../service/message/socket/client-dice.service';
 
 @Component({
   selector: 'app-tabletop',
