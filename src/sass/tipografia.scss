@@ -1,27 +1,69 @@
 @import 'rem-calc.scss';
 
 :root {
-    .title-large{
-        font-size: rem-calc(72);
-    }
+  .title-large {
+    font-size: rem-calc(72);
+  }
 
-    .title{
-        font-size: rem-calc(48);
-    }
+  .title {
+    font-size: rem-calc(48);
+  }
 
-    .sub-title{
-        font-size: rem-calc(40);
-    }
+  .sub-title {
+    font-size: rem-calc(40);
+  }
 
-    .descrition{
-        font-size: rem-calc(32);
-    }
+  .descrition {
+    font-size: rem-calc(32);
+  }
 
-    .normal{
-        font-size: rem-calc(8);
-    }
+  .normal {
+    font-size: rem-calc(8);
+  }
 
-    b {
-      font-weight: 600;
-    }
+  b {
+    font-weight: 600;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    display: block;
+    margin: 0;
+    font-weight: bold;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  h3 {
+    font-size: 1.17em;
+  }
+
+  h4 {
+    font-size: 1em;
+  }
+
+  h5 {
+    font-size: .83em;
+  }
+
+  h6 {
+    font-size: .67em;
+  }
+
+  .primary-color-30 {
+    color: var(--primary-color-30);
+  }
+
+  .primary-color-50 {
+    color: var(--primary-color-50);
+  }
+
+  .primary-color-100 {
+    color: var(--primary-color-100);
+  }
 }

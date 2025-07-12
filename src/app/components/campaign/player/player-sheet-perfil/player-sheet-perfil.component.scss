@@ -7,14 +7,53 @@
 
   .grid {
     display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
+    background-color: white;
+  }
+
+  .grid-template-form {
+    display: grid;
+    grid-template-columns: 24% auto;
+  }
+
+  .grid-template-2 {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+
+  .grid-template-3 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+
+  .grid-template-5 {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+  }
+
+  .grid-template-6 {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+  }
+
+  .grid-template-7 {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+  }
+
+  .grid-template-8 {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto;
+  }
+
+  .grid-template-9 {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto;
   }
 
   .item-header {
     min-height: rem-calc(32);
     display: flex;
-    margin: 1px;
-    background: deepskyblue;
+    margin: 1.5px;
     justify-content: center;
     align-items: center;
     font-size: rem-calc(10);
@@ -23,10 +62,63 @@
   .item {
     min-height: rem-calc(32);
     display: flex;
-    margin: 1px;
-    background: tomato;
+    margin: 1.5px;
     justify-content: center;
     align-items: center;
     font-size: rem-calc(10);
+    color: var(--primary-color-50);
+    border: none;
+    border-radius: rem-calc(1);
+    box-shadow: 0 0 0 rem-calc(0.25) #808080ab;
+  }
+
+  .item-destaque {
+    background:  var( --neutral-color-94);
+    box-shadow: none;
+  }
+
+  .item-caption {
+    font-size: rem-calc(6);
+  }
+
+  .heart {
+    background-image: url("/icon/Heart.svg");
+    background-size: cover;
+    height: 128px;
+    width: 128px;
+    border-radius: 10%;
+    margin-bottom: - rem-calc(16);
+    align-content: center;
+    text-align: center;
+    color: #004609;
+  }
+
+  .shield {
+    background-image: url("/icon/Shield.svg");
+    background-size: cover;
+    height: 128px;
+    width: 128px;
+    border-radius: 10%;
+    margin-bottom: - rem-calc(8);
+    align-content: center;
+    text-align: center;
+    color: #004609;
+  }
+
+  .seven-star {
+    background-image: url("/icon/Seven-Pointed-Star.svg");
+    background-size: cover;
+    height: 128px;
+    width: 128px;
+    border-radius: 10%;
+    margin-bottom: - rem-calc(8);
+    align-content: center;
+    text-align: center;
+    color: #004609;
+  }
+
+  .skill-container{
+    text-align: center;
+    color: #004609;
   }
 }

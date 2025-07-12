@@ -1,42 +1,99 @@
-<div class="container">
-  <div class="grid">
-    <div class="item-header">Habilidade</div>
-    <div class="item-header">Valor</div>
-    <div class="item-header">MOD</div>
-    <div class="item-header">Valor Temp.</div>
-    <div class="item-header">MOD. Temp.</div>
+<div class="d-flex-row d-flex-space-around">
+  <div class="skill-container">
+    <div class="heart" matTooltip="Pontos de Vida"  [matTooltipPositionAtOrigin]="true">
+      <span>156</span>
+    </div>
+    <span>PV</span>
+  </div>
 
-    <div class="item">FOR</div>
+  <div class="skill-container">
+    <div class="shield" matTooltip="Classe de Armadura"  [matTooltipPositionAtOrigin]="true">
+      <span>20</span>
+    </div>
+    CA
+  </div>
+
+  <div class="skill-container">
+    <div class="seven-star" matTooltip="Pontos de Cosmos"  [matTooltipPositionAtOrigin]="true">
+      <span>6</span>
+    </div>
+    PC
+  </div>
+</div>
+
+<h4 class="mt-5 mb-5 primary-color-30">Deslocamento/Saúde</h4>
+<div class="container">
+  <div class="grid grid-template-3">
+    <div class="item item-destaque">PV</div>
+    <div class="item"></div>
+    <div class="item"></div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="grid grid-template-6">
+    <div class="item item-destaque">Deslocamento</div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+  </div>
+</div>
+
+<div class="container">
+  <h4 class="mt-5 mb-5 primary-color-30">Atributos</h4>
+  <div class="grid grid-template-5">
+
+    <div class="item item-destaque d-flex-column">
+      <span>FOR</span>
+      <span class="item-caption">Força</span>
+    </div>
     <div class="item">6</div>
     <div class="item">-2</div>
     <div class="item"></div>
     <div class="item"></div>
 
-    <div class="item">DES</div>
+    <div class="item item-destaque d-flex-column">
+      <span>DES</span>
+      <span class="item-caption">Destreza</span>
+    </div>
     <div class="item">17</div>
     <div class="item">+3</div>
     <div class="item"></div>
     <div class="item"></div>
 
-    <div class="item">CON</div>
+    <div class="item item-destaque d-flex-column">
+      <span>CON</span>
+      <span class="item-caption">Constituição</span>
+    </div>
     <div class="item">10</div>
     <div class="item">0</div>
     <div class="item"></div>
     <div class="item"></div>
 
-    <div class="item">INT</div>
+    <div class="item item-destaque d-flex-column">
+      <span>INT</span>
+      <span class="item-caption">Inteligência</span>
+    </div>
     <div class="item">18</div>
     <div class="item">+4</div>
     <div class="item"></div>
     <div class="item"></div>
 
-    <div class="item">SAB</div>
+    <div class="item item-destaque d-flex-column">
+      <span>SAB</span>
+      <span class="item-caption">Sabedoria</span>
+    </div>
     <div class="item">16</div>
     <div class="item">+3</div>
     <div class="item"></div>
     <div class="item"></div>
 
-    <div class="item">CAR</div>
+    <div class="item item-destaque d-flex-column">
+      <span>CAR</span>
+      <span class="item-caption">Carisma</span>
+    </div>
     <div class="item">10</div>
     <div class="item">0</div>
     <div class="item"></div>
@@ -44,4 +101,109 @@
   </div>
 </div>
 
+<h4 class="mt-5 mb-5 primary-color-30">Teste de Resistência</h4>
+<div class="container">
+  <div class="grid grid-template-7">
+    <div class="item item-destaque d-flex-column">
+      <span>Fortitude</span>
+      <span class="item-caption">Constituição</span>
+    </div>
+    <div class="item">6</div>
+    <div class="item">-2</div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
 
+    <div class="item item-destaque d-flex-column">
+      <span>Reflexos</span>
+      <span class="item-caption">Destreza</span>
+    </div>
+    <div class="item">17</div>
+    <div class="item">+3</div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+
+    <div class="item item-destaque d-flex-column">
+      <span>Vontade</span>
+      <span class="item-caption">Sabedoria</span>
+    </div>
+    <div class="item">10</div>
+    <div class="item">0</div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+
+  </div>
+</div>
+
+<h4 class="mt-5 mb-5 primary-color-30">Classe de Armadura</h4>
+<div class="container">
+  <div class="grid grid-template-9">
+    <div class="item item-destaque">CA</div>
+    <div class="item">6</div>
+    <div class="item">-2</div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item">6</div>
+    <div class="item">-2</div>
+    <div class="item"></div>
+    <div class="item"></div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="grid grid-template-8">
+    <div class="item item-destaque">Iniciativa</div>
+    <div class="item">6</div>
+    <div class="item item-destaque">Toque</div>
+    <div class="item"></div>
+    <div class="item item-destaque">Surpresa</div>
+    <div class="item"></div>
+    <div class="item item-destaque">Falha Armadura</div>
+    <div class="item"></div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="grid grid-template-7">
+    <div class="item item-destaque">Corpo a Corpo</div>
+    <div class="item">6</div>
+    <div class="item">-2</div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+
+    <div class="item item-destaque">Distância</div>
+    <div class="item">17</div>
+    <div class="item">+3</div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+  </div>
+</div>
+
+<h4 class="mt-5 mb-5 primary-color-30">Outros</h4>
+<div class="container">
+  <div class="grid grid-template-form">
+    <div class="item item-destaque">Idiomas</div>
+    <div class="item"></div>
+  </div>
+</div>
+<div class="container">
+  <div class="grid grid-template-form" >
+    <div class="item item-destaque">Oficio</div>
+    <div class="item"></div>
+  </div>
+</div>
+<div class="container">
+  <div class="grid grid-template-form">
+    <div class="item item-destaque">Efeitos</div>
+    <div class="item"></div>
+  </div>
+</div>

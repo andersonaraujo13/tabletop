@@ -1,0 +1,42 @@
+@import '../../../../../sass/rem-calc.scss';
+
+:host {
+  .background-color {
+    background-color: white;
+  }
+
+  .container {
+    margin: rem-calc(5);
+  }
+
+  .item {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-evenly;
+  }
+
+  .item-description {
+    width: 80%;
+    display: flex;
+  }
+
+  .item-description-resumo {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .item-description-quantidade {
+    width: 10%;
+  }
+
+  .icon {
+    align-self: center;
+    cursor: pointer;
+  }
+
+  .mat-expansion-panel-header-description {
+    flex-direction: row-reverse;
+  }
+}
