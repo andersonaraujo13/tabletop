@@ -22,7 +22,7 @@
             "browser": "src/main.ts",
             "polyfills": [
               "zone.js",
-              "src/pollyfill-like-file.ts"
+              "src/pollyfill.ts"
             ],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
@@ -83,7 +83,7 @@
             "polyfills": [
               "zone.js",
               "zone.js/testing",
-              "src/pollyfill-like-file.ts"
+              "src/pollyfill.ts"
             ],
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",

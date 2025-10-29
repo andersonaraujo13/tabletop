@@ -4,7 +4,7 @@ import { RollDiceListComponent } from '../../../components/campaign/dice/roll-di
 import { PlayerSheetComponent } from '../../../components/campaign/player/player-sheet/player-sheet.component';
 import { PlayerShieldListComponent } from '../../../components/campaign/player/player-shield-list/player-shield-list.component';
 import { MasterShieldComponent } from '../../../components/campaign/master/master-shield/master-shield.component';
-import { ClientService } from '../../../service/message/socket/client-dice.service';
+import { RedisClientService } from '../../../service/message/redis/redis-client.service';
 
 @Component({
   selector: 'app-tabletop',
@@ -20,9 +20,12 @@ import { ClientService } from '../../../service/message/socket/client-dice.servi
   styleUrl: './tabletop.component.scss',
 })
 export default class TabletopComponent implements OnInit {
-  #messageServiceApi = inject(ClientService);
+  #messageServiceApi = inject(RedisClientService);
 
-  ngOnInit(): void {
-    this.#messageServiceApi.connect();
+  ngOnInit() {
+    /*this.#messageServiceApi.getMessages().subscribe(value => {
+      console.log(value);
+    //  this.notificationList.push(value);
+    });*/
   }
 }

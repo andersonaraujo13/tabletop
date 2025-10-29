@@ -1,7 +1,6 @@
 import { Component, inject, Input } from '@angular/core';
 import { RollDice } from '../../../../class/campaign/dice/roll-dice.class';
 import { Skill } from '../../../../class/campaign/player/skill.class';
-import { ClientService } from '../../../../service/message/socket/client-dice.service';
 import { FormsModule } from '@angular/forms';
 import { NgClass } from '@angular/common';
 import { NumbersOnlyDirective } from '../../../../utils/directive/numbers-only.directive';
@@ -14,7 +13,7 @@ import { NumbersOnlyDirective } from '../../../../utils/directive/numbers-only.d
   styleUrl: './player-sheet-skill.component.scss'
 })
 export class PlayerSheetSkillComponent {
-  #messageServiceApi = inject(ClientService);
+  //#messageServiceApi = inject(ClientService);
 
   @Input({required: true})
   public skill: Skill;
@@ -24,7 +23,7 @@ export class PlayerSheetSkillComponent {
     roll.nomePlayer = 'Anderson de Araujo Santos'
     roll.nomePericia = this.skill.pericia;
     roll.formula = '1D20 + ' + this.skill.modificadorPericia;
-    this.#messageServiceApi.roll(roll);
+    //this.#messageServiceApi.roll(roll);
   }
 
   public roll30(){
@@ -32,7 +31,7 @@ export class PlayerSheetSkillComponent {
     roll.nomePlayer = 'Anderson de Araujo Santos'
     roll.nomePericia = this.skill.pericia;
     roll.formula = '1D30 + ' + this.skill.modificadorPericia;
-    this.#messageServiceApi.roll(roll);
+    //this.#messageServiceApi.roll(roll);
   }
 
   public checkSkill(){

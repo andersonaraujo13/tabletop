@@ -24,20 +24,16 @@ export class PlayerSheetBagComponent {
   selected = '';
   readonly dialog = inject(MatDialog);
 
-  openDialog() {
-    const dialogRef = this.dialog.open(DialogContentExampleDialog);
-
-    dialogRef.afterClosed().subscribe((result) => {
-      console.log(`Dialog result: ${result}`);
-    });
+  public abrirCadastroItem() {
+    const dialogRef = this.dialog.open(PlayerSheetBagDialog);
   }
 }
 
 @Component({
-  selector: 'dialog-content-example-dialog',
-  templateUrl: 'dialog-content-example-dialog.html',
+  selector: 'player-sheet-bag-dialog',
+  templateUrl: 'player-sheet-bag-dialog.html',
   standalone: true,
   imports: [MatDialogModule, MatButtonModule],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class DialogContentExampleDialog {}
+export class PlayerSheetBagDialog {}

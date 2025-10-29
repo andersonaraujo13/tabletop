@@ -8,7 +8,7 @@
   },
   "files": [
     "src/main.ts",
-    "src/pollyfill-like-file.ts"
+    "src/pollyfill.ts"
   ],
   "include": [
     "src/**/*.d.ts"

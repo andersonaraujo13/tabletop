@@ -24,7 +24,7 @@ export class PlayerSheetGrimoireComponent {
   readonly dialog = inject(MatDialog);
 
   openDialog() {
-    const dialogRef = this.dialog.open(DialogContentExampleDialog);
+    const dialogRef = this.dialog.open(PlayerSheetGrimoireDialog);
 
     dialogRef.afterClosed().subscribe(result => {
       console.log(`Dialog result: ${result}`);
@@ -33,10 +33,10 @@ export class PlayerSheetGrimoireComponent {
 }
 
 @Component({
-  selector: 'dialog-content-example-dialog',
-  templateUrl: 'dialog-content-example-dialog.html',
+  selector: 'player-sheet-grimoire-dialog',
+  templateUrl: 'player-sheet-grimoire-dialog.html',
   standalone: true,
   imports: [MatDialogModule, MatButtonModule],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class DialogContentExampleDialog {}
+export class PlayerSheetGrimoireDialog {}
