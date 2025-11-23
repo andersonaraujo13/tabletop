@@ -36,6 +36,10 @@
               "src/sass/m3-theme.scss",
               "src/styles.scss"
             ],
+            "allowedCommonJsDependencies": [
+              "@xmldom/xmldom",
+              "parse-svg-path"
+            ],
             "scripts": []
           },
           "configurations": {

@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatCardModule } from '@angular/material/card';
-import { PlayerSheetSkillComponent } from '../player-sheet-skill/player-sheet-skill.component';
 import { PlayerSheetSkillListComponent } from '../player-sheet-skill-list/player-sheet-skill-list.component';
 import { PlayerSheetBagComponent } from '../player-sheet-bag/player-sheet-bag.component';
 import { PlayerSheetWeaponComponent } from '../player-sheet-weapon/player-sheet-weapon.component';
@@ -14,7 +13,6 @@ import { PlayerSheetCampaignComponent } from "../player-sheet-campaign/player-sh
   imports: [
     MatTabsModule,
     MatCardModule,
-    PlayerSheetSkillComponent,
     PlayerSheetSkillListComponent,
     PlayerSheetBagComponent,
     PlayerSheetWeaponComponent,
