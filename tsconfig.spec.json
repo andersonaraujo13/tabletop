@@ -8,6 +8,9 @@
       "jasmine"
     ]
   },
+  "files": [
+    "src/pollyfill.ts"
+  ],
   "include": [
     "src/**/*.spec.ts",
     "src/**/*.d.ts"

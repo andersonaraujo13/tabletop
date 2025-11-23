@@ -14,6 +14,8 @@ describe('PlayerSheetSkillComponent', () => {
 
     fixture = TestBed.createComponent(PlayerSheetSkillComponent);
     component = fixture.componentInstance;
+    // initialize required @Input
+    component.skill = new (await import('../../../../class/campaign/player/skill.class')).Skill();
     fixture.detectChanges();
   });
 
