@@ -1,4 +1,4 @@
-@import '../../../../../sass/rem-calc.scss';
+@use '../../../../../sass/rem-calc' as *;
 
 :host {
   .background-color {
