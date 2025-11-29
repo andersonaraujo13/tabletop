@@ -1,0 +1,58 @@
+:host{
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+  }
+
+	.nf-root{
+		position: fixed;
+		inset: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 2rem;
+		box-sizing: border-box;
+		background: transparent;
+		color: #efe7d6;
+	}
+
+	.nf-card{
+		display: flex;
+		gap: 2rem;
+		align-items: center;
+		background: transparent;
+		padding: 1.5rem;
+		border-radius: 12px;
+		max-width: 920px;
+		width: 100%;
+		justify-content: center;
+	}
+
+	.nf-illustration{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex: 0 0 auto;
+	}
+
+	.nf-illustration img,
+	.nf-illustration svg.nf-svg{
+		width: min(820px, 85vw);
+		max-width: 100%;
+		height: auto;
+		display: block;
+	}
+
+	@media (max-width: 920px){
+		.nf-card{flex-direction:column;align-items:center;text-align:center;gap:1.25rem;padding:1rem}
+		.nf-illustration img,.nf-illustration svg.nf-svg{width: min(620px, 78vw)}
+	}
+
+	@media (max-width: 420px){
+		.nf-root{padding:1rem}
+		.nf-card{gap:0.75rem}
+		.nf-illustration img,.nf-illustration svg.nf-svg{width: min(360px, 92vw)}
+	}
+}

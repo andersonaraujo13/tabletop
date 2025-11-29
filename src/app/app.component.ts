@@ -8,36 +8,7 @@ import { OidcSecurityService } from 'angular-auth-oidc-client';
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, CommonModule],
-  template: `
-    <header style="display:flex;align-items:center;justify-content:space-between;padding:0.5rem 1rem;background:#121212;color:#fff;">
-    <div>{{ title }}</div>
-    <div>
-        <button (click)="login()" style="margin-right:0.5rem;">Login</button>
-        <button (click)="logout()" style="margin-right:0.5rem;">Logout</button>
-        <button (click)="request()">Requisitar</button>
-      </div>
-    </header>
-    <main style="padding:1rem">
-      <section style="margin-bottom:1rem;background:#f8f9fa;padding:1rem;border-radius:6px">
-        <h3>Token Debug</h3>
-        <div style="display:flex;gap:1rem;align-items:flex-start;">
-          <div style="flex:1;min-width:300px">
-            <label><strong>Access Token</strong></label>
-            <textarea readonly rows="4" style="width:100%">{{ token }}</textarea>
-          </div>
-          <div style="flex:1;min-width:300px">
-            <label><strong>Decoded Claims</strong></label>
-            <pre style="background:#fff;padding:0.5rem;border-radius:4px;max-height:160px;overflow:auto">{{ claims | json }}</pre>
-            <div style="margin-top:0.5rem"><strong>Status:</strong> <span>{{ requestStatus }}</span></div>
-            <div style="margin-top:0.5rem"><label><strong>Response</strong></label>
-              <pre style="background:#fff;padding:0.5rem;border-radius:4px;max-height:160px;overflow:auto">{{ responseBody }}</pre>
-            </div>
-          </div>
-        </div>
-      </section>
-      <router-outlet></router-outlet>
-    </main>
-  `
+  template: `<router-outlet></router-outlet>`
 })
 export class AppComponent {
   title: 'Sonhonauta';
