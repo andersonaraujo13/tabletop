@@ -1,0 +1,57 @@
+@if (universe.length > 4) {
+  <p-carousel [value]="universe" [numVisible]="4" [numScroll]="1" [circular]="false">
+    <ng-template let-product #item>
+      <mat-card class="universe-card" appearance="outlined">
+        <mat-card-header>
+          <mat-card-title>Chihuahua</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>{{longText}}</p>
+        </mat-card-content>
+        <mat-card-footer class="universe-card-footer">
+          <mat-chip-set aria-label="Chihuahua traits">
+            <mat-chip>charming</mat-chip>
+            <mat-chip>graceful</mat-chip>
+            <mat-chip>sassy</mat-chip>
+          </mat-chip-set>
+        </mat-card-footer>
+      </mat-card>
+    </ng-template>
+  </p-carousel>
+}
+
+<div class="universe-list">
+@if (universe.length <= 4) {
+  @for (item of universe; track item) {
+    <mat-card class="universe-card" appearance="outlined">
+      <mat-card-header>
+        <mat-card-title>Chihuahua</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{longText}}</p>
+      </mat-card-content>
+      <mat-card-footer class="universe-card-footer">
+        <mat-chip-set aria-label="Chihuahua traits">
+          <mat-chip>charming</mat-chip>
+          <mat-chip>graceful</mat-chip>
+          <mat-chip>sassy</mat-chip>
+        </mat-chip-set>
+      </mat-card-footer>
+    </mat-card>
+  }
+}
+
+@if (universe.length < 4) {
+  <mat-card class="universe-card" appearance="outlined" style="    min-width: 400px;
+    min-height: 198px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 100px;">
+    <mat-card-content>
+      +
+    </mat-card-content>
+  </mat-card>
+}
+</div>

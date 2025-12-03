@@ -1,5 +1,5 @@
 <app-navigation>
-    <section ngProjectAs="content">
-      <p>dashboard works!</p>
-    </section>
+  <section ngProjectAs="content">
+    <ng-container *ngComponentOutlet="currentComponent" />
+  </section>
 </app-navigation>
