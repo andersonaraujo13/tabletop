@@ -2,12 +2,34 @@
 
 :host {
   --nav-head-color: var(--primary-color-80);
-  --nav-background-color: var(--primary-color-10);
+  --nav-background-color: var(--neutral-color-b-10);
   --mat-sidenav-container-divider-color: transparent;
 
   --mat-list-list-item-label-text-color: var(--primary-color-100);
   --mat-list-list-item-label-text-font: MedievalSharp, cursive;
   --mat-list-list-item-hover-label-text-color: var(--primary-color-60);
+
+  --p-accordion-header-background:  var(--neutral-color-b-10);
+  --p-accordion-panel-border-color: var(--neutral-color-b-10);
+
+  --p-accordion-content-background: var(--primary-color-70);
+  --p-accordion-content-border-color: var(--primary-color-70);
+
+  --p-accordion-header-active-background: var(--primary-color-70);
+  --p-accordion-header-active-hover-background: var(--primary-color-70);
+  --p-accordion-header-hover-background: var(--primary-color-70);
+
+  --p-accordion-header-padding: 8px;
+
+  --p-accordion-header-color: var(--primary-color-100);
+  --p-accordion-header-hover-color: var(--primary-color-30);
+
+  --p-accordion-header-active-color: var(--primary-color-30);
+  --p-accordion-header-active-hover-color: var(--primary-color-100);
+
+  --p-accordion-header-first-top-border-radius: 0px;
+  --p-accordion-header-last-bottom-border-radius: 0px;
+  --p-accordion-content-padding: 5px;
 
   .sidenav-container {
     height: 100%;
@@ -66,4 +88,20 @@
     margin-left: 0;
   }
 
+  .nav-item {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: rem-calc(24);
+    transition: background-color 200ms ease 0s;
+    color: var(--primary-color-30);
+    border-radius: 8px;
+  }
+
+  .nav-item:hover {
+    background-color: var(--primary-color-30);
+    color: var(--primary-color-100);
+    border-radius: 8px;
+  }
 }

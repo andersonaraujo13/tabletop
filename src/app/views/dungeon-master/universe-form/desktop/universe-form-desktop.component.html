@@ -1,0 +1,38 @@
+<div class="form">
+  <form [formGroup]="formCadastro" (ngSubmit)="onSubmit()" >
+      <p-divider align="left" type="solid" style="margin-bottom: 100px;">
+        <h2>Informações Gerais</h2>
+      </p-divider>
+      <div>
+          <p-floatlabel >
+              <input pInputText id="username" type="text"  formControlName="username" [invalid]="isInvalid('username')" pSize="small" />
+              <label for="username">Username</label>
+          </p-floatlabel>
+          @if (isInvalid('username')) {
+              <p-message severity="error" size="small" variant="simple">Username is required.</p-message>
+          }
+      </div>
+      <div>
+          <input pInputText type="email" id="email" placeholder="Email" formControlName="email" [invalid]="isInvalid('email')" />
+          @if (isInvalid('email')) {
+              @if (formCadastro.get('email')?.errors?.['required']) {
+                  <p-message severity="error" size="small" variant="simple">Email is required.</p-message>
+              }
+              @if (formCadastro.get('email')?.errors?.['email']) {
+                  <p-message severity="error" size="small" variant="simple">Please enter a valid email.</p-message>
+              }
+          }
+      </div>
+      <button pButton type="submit" style="background-color: #7abb71;">
+        <span pButtonLabel>Submit</span>
+      </button>
+
+      <p-divider align="left" type="solid" style="margin-bottom: 100px;">
+        <h2>Atributos</h2>
+      </p-divider>
+
+      <p-divider align="left" type="solid" style="margin-bottom: 100px;">
+        <h2>Competência</h2>
+      </p-divider>
+  </form>
+</div>

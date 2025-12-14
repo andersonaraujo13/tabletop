@@ -1,0 +1,85 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer [class.sidenav]="!collapse" [class.sidenav-small]="collapse" fixedInViewport
+      [attr.role]="'navigation'" [mode]="'side'" [opened]="true">
+    <mat-toolbar style="padding: 0px; justify-content: center; cursor: pointer;" (click)="collapseSideNav()">
+      <i class="fa-solid fa-user"></i>
+    </mat-toolbar>
+    <mat-nav-list>
+      <p-accordion value="0">
+        <p-accordion-panel value="0">
+          <p-accordion-header>
+            <ng-template #toggleicon let-active="active">
+            </ng-template>
+            <div class="d-flex-row d-flex-space-evenly w-100 ">
+              <i class="fa-earth fa-solid"></i>
+              @if (!collapse) {
+                <span class="w-72">Universo</span>
+              }
+            </div>
+          </p-accordion-header>
+          @if (!collapse) {
+            <p-accordion-content>
+              <div class="d-flex-column" >
+                <div class="mt-5 mb-5 nav-item">
+                  Atributos
+                </div>
+                <div class="mb-5 nav-item">Competências</div>
+                <div class="mt-5 mb-5 nav-item">Classes</div>
+                <div class="mt-5 mb-5 nav-item">Raças</div>
+                <div class="mt-5 mb-5 nav-item">NPCs</div>
+                <div class="mt-5 mb-5 nav-item">História</div>
+                <div class="mt-5 mb-5 nav-item">Material</div>
+                <div class="mt-5 mb-5 nav-item">Armas</div>
+                <div class="mt-5 nav-item">Armaduras</div>
+              </div>
+            </p-accordion-content>
+          }
+        </p-accordion-panel>
+
+        <p-accordion-panel value="1">
+          <p-accordion-header>
+            <ng-template #toggleicon let-active="active">
+            </ng-template>
+            <div class="d-flex-row d-flex-space-evenly w-100 ">
+              <i class="fa-solid fa-map"></i>
+              @if (!collapse) {
+                <span class="w-72">Campanha</span>
+              }
+            </div>
+          </p-accordion-header>
+          @if (!collapse) {
+            <p-accordion-content>
+              Cadastrar
+            </p-accordion-content>
+          }
+        </p-accordion-panel>
+
+        <p-accordion-panel value="2">
+          <p-accordion-header>
+            <ng-template #toggleicon let-active="active"/>
+            <div class="d-flex-row d-flex-space-evenly w-100 ">
+              <i class="fa-solid fa-hat-wizard"></i>
+              @if (!collapse) {
+                <span class="w-72">Magias</span>
+              }
+            </div>
+          </p-accordion-header>
+          @if (!collapse) {
+            <p-accordion-content>
+              Cadastrar
+            </p-accordion-content>
+          }
+        </p-accordion-panel>
+      </p-accordion>
+
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content  [style.margin-left.px]="collapse ? 50 : 150">
+    <mat-toolbar>
+      <span>Menu Desktop</span>
+    </mat-toolbar>
+    <div class="container">
+      <ng-content select="content"/>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

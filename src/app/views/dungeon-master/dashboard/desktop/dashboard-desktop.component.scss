@@ -1,9 +1,12 @@
+@use 'rem-calc' as *;
+
 :host {
   .universe-list {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
+    margin-bottom: rem-calc(16);
   }
 
   .universe-card {
@@ -12,5 +15,27 @@
 
   .universe-card-footer {
     padding: 16px;
+  }
+
+  .campaign-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .campaign-list-title {
+    color: var(--primary-color-100);
+    font-size: rem-calc(40);
+  }
+
+  .campaign-list-card {
+    min-width: 100%;
+    min-height: rem-calc(64);
+    padding: rem-calc(8);
+    border-radius: rem-calc(8) rem-calc(8) rem-calc(8) rem-calc(8);
+    -webkit-border-radius: rem-calc(8) rem-calc(8) rem-calc(8) rem-calc(8);
+    -moz-border-radius: rem-calc(8) rem-calc(8) rem-calc(8) rem-calc(8);
+    background: var(--neutral-color-b-10);
+    border: rem-calc(2) solid var(--primary-color);
   }
 }

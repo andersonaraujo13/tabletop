@@ -6,7 +6,15 @@ export const routes: Routes = [
     loadComponent: () => import('./dashboard/dashboard.component'),
   },
   {
-    path: '**',
-    loadComponent: () => import('./dashboard/dashboard.component'),
+    path: 'universe',
+    loadComponent: () => import('./universe/universe.component'),
+  },
+  {
+    path: 'universe/form',
+    loadComponent: () => import('./universe-form/universe-form.component'),
+  },
+  {
+    path: 'campaign',
+    loadComponent: () => import('./campaign/campaign.component'),
   },
 ];

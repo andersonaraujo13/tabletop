@@ -1,26 +1,6 @@
 @use 'rem-calc' as *;
 
 :root {
-  .title-large {
-    font-size: rem-calc(72);
-  }
-
-  .title {
-    font-size: rem-calc(48);
-  }
-
-  .sub-title {
-    font-size: rem-calc(40);
-  }
-
-  .descrition {
-    font-size: rem-calc(32);
-  }
-
-  .normal {
-    font-size: rem-calc(8);
-  }
-
   b {
     font-weight: 600;
   }
@@ -55,15 +35,4 @@
     font-size: .67em;
   }
 
-  .primary-color-30 {
-    color: var(--primary-color-30);
-  }
-
-  .primary-color-50 {
-    color: var(--primary-color-50);
-  }
-
-  .primary-color-100 {
-    color: var(--primary-color-100);
-  }
 }
