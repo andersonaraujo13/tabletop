@@ -24,6 +24,7 @@ import { BadgeModule } from 'primeng/badge';
   ],
 })
 export class NavigationDesktopComponent {
+  public selectMenu: number = 0;
   public collapse: boolean = false;
 
   public collapseSideNav(): void {

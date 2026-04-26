@@ -27,7 +27,7 @@ export const appConfig: ApplicationConfig = {
           postLogoutRedirectUri:
             'http://localhost:4200/login/oauth2/code/rpg-table-top',
           clientId: 'rpg-table-top',
-          scope: 'openid profile',
+          scope: 'openid profile offline_access',
           responseType: 'code',
           silentRenew: true,
           useRefreshToken: true,

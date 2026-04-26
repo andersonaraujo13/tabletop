@@ -4,7 +4,7 @@ import { RollDiceListComponent } from '../../../components/campaign/dice/roll-di
 import { PlayerSheetComponent } from '../../../components/campaign/player/player-sheet/player-sheet.component';
 import { PlayerShieldListComponent } from '../../../components/campaign/player/player-shield-list/player-shield-list.component';
 import { MasterShieldComponent } from '../../../components/campaign/master/master-shield/master-shield.component';
-import { RedisClientService } from '../../../service/message/redis/redis-client.service';
+import { RedisClientService } from '../../../service/common/message/redis/redis-client.service';
 
 @Component({
   selector: 'app-tabletop',

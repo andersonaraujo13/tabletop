@@ -1,38 +1,63 @@
-<div class="form">
-  <form [formGroup]="formCadastro" (ngSubmit)="onSubmit()" >
-      <p-divider align="left" type="solid" style="margin-bottom: 100px;">
-        <h2>Informações Gerais</h2>
-      </p-divider>
-      <div>
-          <p-floatlabel >
-              <input pInputText id="username" type="text"  formControlName="username" [invalid]="isInvalid('username')" pSize="small" />
-              <label for="username">Username</label>
-          </p-floatlabel>
-          @if (isInvalid('username')) {
-              <p-message severity="error" size="small" variant="simple">Username is required.</p-message>
-          }
+<div class="container">
+  <form [formGroup]="formCadastro" (ngSubmit)="onSubmit()" class="form d-flex-space-between">
+    <div>
+        <p-divider align="left" type="solid">
+          <h2>Principal</h2>
+        </p-divider>
+        <div class="form-group d-flex-row mt-4">
+          <div class="w-24 mr-1">
+            <p-floatlabel>
+                <input pInputText id="name" type="text" formControlName="name" [invalid]="isInvalid('name')"
+                  pSize="large" class="w-100"/>
+                <label for="name">Nome</label>
+            </p-floatlabel>
+            @if (isInvalid('name')) {
+                <p-message severity="error" size="small" variant="simple" class="mt-1">Campo Obrigatório</p-message>
+            }
+          </div>
+          <div class="w-24">
+            <p-floatlabel class="w-100">
+              <p-select formControlName="system" [options]="systems" optionLabel="description" [invalid]="isInvalid('system')"
+                size="large" class="w-100"/>
+              <label for="system">Sistema</label>
+            </p-floatlabel>
+            @if (isInvalid('system')) {
+                <p-message severity="error" size="small" variant="simple" class="mt-1">Campo Obrigatório</p-message>
+            }
+          </div>
+        </div>
+        <p-divider align="left" type="solid">
+          <h2>Descrição</h2>
+        </p-divider>
+        <div class="mt-4">
+          <p-editor formControlName="description" [style]="{ height: '320px' }">
+            <ng-template #header>
+              <span class="ql-formats">
+                <select class="ql-header" aria-label="Header size">
+                  <option value="1" aria-label="Heading 1"></option>
+                  <option value="2" aria-label="Heading 2"></option>
+                  <option selected aria-label="Normal text"></option>
+                </select>
+              </span>
+              <span class="ql-formats">
+                <button type="button" class="ql-bold" aria-label="Bold"></button>
+                <button type="button" class="ql-italic" aria-label="Italic"></button>
+                <button type="button" class="ql-underline" aria-label="Underline"></button>
+              </span>
+              <span class="ql-formats">
+                <button type="button" class="ql-list" value="ordered" aria-label="ordered"></button>
+              </span>
+            </ng-template>
+          </p-editor>
+        </div>
       </div>
-      <div>
-          <input pInputText type="email" id="email" placeholder="Email" formControlName="email" [invalid]="isInvalid('email')" />
-          @if (isInvalid('email')) {
-              @if (formCadastro.get('email')?.errors?.['required']) {
-                  <p-message severity="error" size="small" variant="simple">Email is required.</p-message>
-              }
-              @if (formCadastro.get('email')?.errors?.['email']) {
-                  <p-message severity="error" size="small" variant="simple">Please enter a valid email.</p-message>
-              }
-          }
+      <div class="mt-2 d-flex d-flex-center">
+        <button pButton type="submit" class="mr-1 bg-primary-color bt-size" size="large" >
+          <span pButtonLabel class="text-primary-color">Cadastrar</span>
+        </button>
+         <button pButton class="bt-size bg-neutral-color" size="large">
+          <span pButtonLabel class="text-primary-color">Cancelar</span>
+        </button>
       </div>
-      <button pButton type="submit" style="background-color: #7abb71;">
-        <span pButtonLabel>Submit</span>
-      </button>
-
-      <p-divider align="left" type="solid" style="margin-bottom: 100px;">
-        <h2>Atributos</h2>
-      </p-divider>
-
-      <p-divider align="left" type="solid" style="margin-bottom: 100px;">
-        <h2>Competência</h2>
-      </p-divider>
   </form>
 </div>

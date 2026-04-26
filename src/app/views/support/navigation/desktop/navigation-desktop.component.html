@@ -5,32 +5,37 @@
       <i class="fa-solid fa-user"></i>
     </mat-toolbar>
     <mat-nav-list>
-      <p-accordion value="0">
+      <p-accordion [(value)]="selectMenu">
         <p-accordion-panel value="0">
           <p-accordion-header>
             <ng-template #toggleicon let-active="active">
             </ng-template>
-            <div class="d-flex-row d-flex-space-evenly w-100 ">
+            <div class="d-flex d-flex-row d-flex-space-evenly w-100 ">
               <i class="fa-earth fa-solid"></i>
               @if (!collapse) {
-                <span class="w-72">Universo</span>
+                <span class="w-72">
+                  Sistema
+                </span>
               }
             </div>
           </p-accordion-header>
           @if (!collapse) {
             <p-accordion-content>
-              <div class="d-flex-column" >
-                <div class="mt-5 mb-5 nav-item">
+              <div class="d-flex d-flex-column" >
+                <div class="nav-item">
+                  Universo
+                </div>
+                <div class="nav-item">
                   Atributos
                 </div>
-                <div class="mb-5 nav-item">Competências</div>
-                <div class="mt-5 mb-5 nav-item">Classes</div>
-                <div class="mt-5 mb-5 nav-item">Raças</div>
-                <div class="mt-5 mb-5 nav-item">NPCs</div>
-                <div class="mt-5 mb-5 nav-item">História</div>
-                <div class="mt-5 mb-5 nav-item">Material</div>
-                <div class="mt-5 mb-5 nav-item">Armas</div>
-                <div class="mt-5 nav-item">Armaduras</div>
+                <div class="nav-item">Competências</div>
+                <div class="nav-item">Classes</div>
+                <div class="nav-item">Raças</div>
+                <div class="nav-item">NPCs</div>
+                <div class="nav-item">História</div>
+                <div class="nav-item">Material</div>
+                <div class="nav-item">Armas</div>
+                <div class="nav-item">Armaduras</div>
               </div>
             </p-accordion-content>
           }
@@ -40,7 +45,7 @@
           <p-accordion-header>
             <ng-template #toggleicon let-active="active">
             </ng-template>
-            <div class="d-flex-row d-flex-space-evenly w-100 ">
+            <div class="d-flex d-flex-row d-flex-space-evenly w-100 ">
               <i class="fa-solid fa-map"></i>
               @if (!collapse) {
                 <span class="w-72">Campanha</span>
@@ -49,7 +54,19 @@
           </p-accordion-header>
           @if (!collapse) {
             <p-accordion-content>
-              Cadastrar
+              <div class="d-flex d-flex-column">
+                <div class="nav-item">
+                  Atributos
+                </div>
+                <div class="nav-item">Competências</div>
+                <div class="nav-item">Classes</div>
+                <div class="nav-item">Raças</div>
+                <div class="nav-item">NPCs</div>
+                <div class="nav-item">História</div>
+                <div class="nav-item">Material</div>
+                <div class="nav-item">Armas</div>
+                <div class="nav-item">Armaduras</div>
+              </div>
             </p-accordion-content>
           }
         </p-accordion-panel>
@@ -57,7 +74,7 @@
         <p-accordion-panel value="2">
           <p-accordion-header>
             <ng-template #toggleicon let-active="active"/>
-            <div class="d-flex-row d-flex-space-evenly w-100 ">
+            <div class="d-flex d-flex-row d-flex-space-evenly w-100 ">
               <i class="fa-solid fa-hat-wizard"></i>
               @if (!collapse) {
                 <span class="w-72">Magias</span>
@@ -66,7 +83,19 @@
           </p-accordion-header>
           @if (!collapse) {
             <p-accordion-content>
-              Cadastrar
+              <div class="d-flex d-flex-column" >
+                <div class="nav-item">
+                  Atributos
+                </div>
+                <div class="nav-item">Competências</div>
+                <div class="nav-item">Classes</div>
+                <div class="nav-item">Raças</div>
+                <div class="nav-item">NPCs</div>
+                <div class="nav-item">História</div>
+                <div class="nav-item">Material</div>
+                <div class="nav-item">Armas</div>
+                <div class="nav-item">Armaduras</div>
+              </div>
             </p-accordion-content>
           }
         </p-accordion-panel>

@@ -1,4 +1,43 @@
 :host{
-  --p-divider-border-color: var(--primary-color);
+  --p-divider-border-color: var(--primary-color-70);
   --p-divider-content-background: var(--neutral-color-b-10);
+  --p-editor-toolbar-item-active-color: var(--primary-color-70);
+  --p-select-option-selected-background: var(--primary-color-20);
+  --p-select-option-selected-focus-background: var(--primary-color-40);
+  --p-select-option-selected-color: var(--primary-color-100);
+  --p-select-option-selected-focus-color: var(--primary-color-100);
+  --p-select-focus-border-color: var(--primary-color-50);
+  --p-inputtext-focus-border-color: var(--primary-color-50);
+  --p-floatlabel-focus-color: var(--primary-color-50);
+
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bt-size{
+    min-width: 300px;
+  }
+
+  .bg-primary-color {
+    background-color: var(--primary-color-70);
+    transition: background-color 200ms ease 0s;
+  }
+
+  .text-primary-color {
+    color: var(--neutral-color-10);
+  }
+
+  .bg-neutral-color {
+    background-color: var(--neutral-color-70);
+    transition: background-color 200ms ease 0s;
+  }
+
+  .bg-neutral-color:hover {
+    background-color: var(--neutral-color-50);
+  }
+
+  .bg-primary-color:hover {
+    background-color: var(--primary-color-50);
+  }
 }

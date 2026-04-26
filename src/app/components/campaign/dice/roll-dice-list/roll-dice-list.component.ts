@@ -2,7 +2,7 @@ import { Component, effect, inject } from '@angular/core';
 import { RollDiceComponent } from "../roll-dice/roll-dice.component";
 import { ScrollPanelModule } from 'primeng/scrollpanel';
 import { RollDice } from '../../../../class/campaign/dice/roll-dice.class';
-import { RedisClientService } from '../../../../service/message/redis/redis-client.service';
+import { RedisClientService } from '../../../../service/common/message/redis/redis-client.service';
 
 @Component({
   selector: 'app-roll-dice-list',

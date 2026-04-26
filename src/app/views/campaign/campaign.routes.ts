@@ -6,6 +6,5 @@ export const routes: Routes = [
    path:':id',
    title: 'Sonhonauta',
    loadComponent: () => import('./tabletop/tabletop.component'),
-   canActivate: [tabletopGuard]
   },
 ];

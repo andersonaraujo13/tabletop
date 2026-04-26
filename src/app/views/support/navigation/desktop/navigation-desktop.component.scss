@@ -12,14 +12,14 @@
   --p-accordion-header-background:  var(--neutral-color-b-10);
   --p-accordion-panel-border-color: var(--neutral-color-b-10);
 
-  --p-accordion-content-background: var(--primary-color-70);
-  --p-accordion-content-border-color: var(--primary-color-70);
+  --p-accordion-content-background: var(--primary-color-80);
+  --p-accordion-content-border-color: var(--primary-color-80);
 
   --p-accordion-header-active-background: var(--primary-color-70);
   --p-accordion-header-active-hover-background: var(--primary-color-70);
   --p-accordion-header-hover-background: var(--primary-color-70);
 
-  --p-accordion-header-padding: 8px;
+  --p-accordion-header-padding: 0.5rem;
 
   --p-accordion-header-color: var(--primary-color-100);
   --p-accordion-header-hover-color: var(--primary-color-30);
@@ -29,7 +29,7 @@
 
   --p-accordion-header-first-top-border-radius: 0px;
   --p-accordion-header-last-bottom-border-radius: 0px;
-  --p-accordion-content-padding: 5px;
+  --p-accordion-content-padding: 0.313rem;
 
   .sidenav-container {
     height: 100%;
@@ -70,8 +70,9 @@
   .container {
     display: flex;
     flex-direction: column;
-    height: calc(100vh - var(--mat-toolbar-standard-height));
+    height: calc(100vh - rem-calc(40));
     padding: rem-calc(10);
+    overflow: auto;
   }
 
   mat-sidenav, .sidenav, .sidenav-small {
@@ -96,12 +97,12 @@
     height: rem-calc(24);
     transition: background-color 200ms ease 0s;
     color: var(--primary-color-30);
-    border-radius: 8px;
+    border-radius: rem-calc(8);
   }
 
   .nav-item:hover {
-    background-color: var(--primary-color-30);
+    background-color: var(--primary-color-40);
     color: var(--primary-color-100);
-    border-radius: 8px;
+    border-radius: rem-calc(8);
   }
 }

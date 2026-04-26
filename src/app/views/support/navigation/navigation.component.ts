@@ -1,7 +1,7 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { NavigationDesktopComponent } from './desktop/navigation-desktop.component';
 import { NavigationMobileComponent } from './mobile/navigation-mobile.component';
-import { DeviceService } from '../../../service/device/device.service';
+import { DeviceService } from '../../../service/common/device.service';
 @Component({
   selector: 'app-navigation',
   templateUrl: './navigation.component.html',

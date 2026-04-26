@@ -1,5 +1,5 @@
 import { Injectable, signal } from '@angular/core';
-import { RollDice } from '../../../class/campaign/dice/roll-dice.class';
+import { RollDice } from '../../../../class/campaign/dice/roll-dice.class';
 import { io, Socket } from 'socket.io-client';
 
 @Injectable({
