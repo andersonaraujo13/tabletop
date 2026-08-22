@@ -6,14 +6,18 @@ import { User } from '../../class/common/user.class';
   providedIn: 'root',
 })
 export class CookieStorageService {
-  private service = inject(CookieService);
+  private readonly service = inject(CookieService);
 
   public setUser(user: string) {
     this.service.set('user', JSON.stringify(this.parser(user)));
   }
 
   public getUser(): User {
-    return Object.assign(new User(), JSON.parse(this.service.get('user')));
+    const storedUser = this.service.get('user');
+
+    return storedUser
+      ? Object.assign(new User(), JSON.parse(storedUser))
+      : new User();
   }
 
   private parser(user: string): User {

@@ -6,10 +6,11 @@ export const OAuthGuard: CanActivateFn = (route, state): boolean | UrlTree => {
   const router = inject(Router);
   const oauth = inject(OAuthService);
 
-  return true;
+  //return true;
 
-  /*if(oauth.isAuthenticated()){
+  if(oauth.isAuthenticated()){
     return true;
-  }*/
+  }
+
   return router.parseUrl('/support/unauthorized');
 };

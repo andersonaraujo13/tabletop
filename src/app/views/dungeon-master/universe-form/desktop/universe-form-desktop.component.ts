@@ -16,6 +16,7 @@ import { Select } from 'primeng/select';
 import { Book } from '../../../../class/dungeon-master/book.class';
 import { BookService } from '../../../../service/dungeon-master/book.service';
 import { Universe } from '../../../../class/dungeon-master/universe.class';
+import { UniverseService } from '../../../../service/dungeon-master/universe.service';
 
 @Component({
   imports: [
@@ -34,6 +35,7 @@ import { Universe } from '../../../../class/dungeon-master/universe.class';
 })
 export default class UniverseFormDesktopComponent implements OnInit {
   private bookService = inject(BookService);
+  private universeService = inject(UniverseService);
   private universe: Universe;
   formCadastro: FormGroup;
   formSubmitted = false;
@@ -42,7 +44,7 @@ export default class UniverseFormDesktopComponent implements OnInit {
 
   constructor(private fb: FormBuilder) {
     this.formCadastro = this.fb.group({
-      name: [this.universe.name, Validators.required],
+      name: ['', Validators.required],
       description: ['', Validators.required],
       system: ['', [Validators.required]],
     });
@@ -50,10 +52,13 @@ export default class UniverseFormDesktopComponent implements OnInit {
 
   onSubmit() {
     this.formSubmitted = true;
-    if (this.formCadastro.valid) {
-      this.formCadastro.reset();
-      this.formSubmitted = false;
+
+    if (this.formCadastro.invalid) {
+      this.formCadastro.markAllAsTouched();
+      return;
     }
+
+    this.salvar();
   }
 
   isInvalid(controlName: string) {
@@ -72,6 +77,19 @@ export default class UniverseFormDesktopComponent implements OnInit {
   }
 
   salvar() {
+    const { name, description, system } = this.formCadastro.getRawValue();
+    const universe = new Universe();
+    universe.name = name;
+    universe.description = description;
+    universe.book = system;
+    universe.active = true;
 
+    this.universeService.save(universe).subscribe({
+      next: () => {
+        this.formCadastro.reset();
+        this.formSubmitted = false;
+      },
+      error: error => console.error('Erro ao salvar o universo:', error),
+    });
   }
 }

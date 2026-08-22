@@ -5,6 +5,7 @@ import Preset from '@primeuix/themes/aura';
 import { providePrimeNG } from 'primeng/config';
 import { AuthModule, LogLevel } from 'angular-auth-oidc-client';
 import { routes } from './app.routes';
+import { environment } from '../environments/environment';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -22,12 +23,11 @@ export const appConfig: ApplicationConfig = {
     importProvidersFrom(
       AuthModule.forRoot({
         config: {
-          authority: 'http://127.0.0.1:18080',
-          redirectUrl: 'http://localhost:4200/login/oauth2/code/rpg-table-top',
-          postLogoutRedirectUri:
-            'http://localhost:4200/login/oauth2/code/rpg-table-top',
-          clientId: 'rpg-table-top',
-          scope: 'openid profile offline_access',
+          authority: environment.servers.identityUrl,
+          redirectUrl: environment.authentication.redirectUrl,
+          postLogoutRedirectUri: environment.authentication.redirectUrl,
+          clientId: environment.authentication.clientId,
+          scope: environment.authentication.scope,
           responseType: 'code',
           silentRenew: true,
           useRefreshToken: true,
